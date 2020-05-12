@@ -1,0 +1,10 @@
+has_ticket = input("you can input true if you have reading")
+knife_length=20
+if has_ticket:
+    print("车票检查通过，准备开始安检")
+    if knife_length>20:
+        print("soory,your kinfe is too lenth,you taknt the care,it has %d mater" % knife_length)
+    else:
+        print("you can pass ,have good trip")
+else:
+    print("sorry，you need bug tickle before that")
