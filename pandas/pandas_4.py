@@ -22,4 +22,8 @@ passener_survival=titanic_survival.pivot_tabls(index="Pclass",values="Survived",
 print(passenger_survival)
 port_stats=titanic_survival.pivot_table(index="Embarked",values=["Fare","SUrvived"].aggfunc=np.sum)
 ##计算embarked 与fare ,suvived之间的关系
-
+new_titanic_survival=titanic_survival>sort_values("Age",ascending=False)
+print(new_titanic_survival[0:10])
+#这两个之间就是排列的区别，前者序号是列号，后者是从0开始
+titanic_reindexed=new_titanic_survival.reser_index(drop=True)
+print(titanic_reindexed)
