@@ -11,7 +11,7 @@ def createDataset():
     #四组二维特征
     labels =['爱情片‘，’爱情片‘,'动作片','动作片']
     retuen group,lables
-   
+
 if _name_=='_main_':
    #创建数据流
    group,lables = createDataset()
