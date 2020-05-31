@@ -9,13 +9,13 @@ def cream_date_set():
     dateSet =pd.DataFrame(row_data)
     return  dateSet
 """
-函数名称：calent
+函数名称：cal_ent
 函数功能：计算香农熵
 """
 def cal_ent(dataSet):
     n=dataSet.shape[0]
     iset=dataSet.iloc[:,-1].value_counts()
-    p=iset/n# 每类标签所占比
+    p=iset/n # 每类标签所占比
     ent=(-p*np.log2(p).sum())
     return ent
 
@@ -23,4 +23,5 @@ def cal_ent(dataSet):
 
 date_set=cream_date_set()
 print(date_set)#数据集
-print(cal_ent(date_set))
+n=cal_ent(date_set)
+print(n)
